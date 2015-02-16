@@ -10,9 +10,10 @@
     $funding_progress = $float_total/8000;
     $midway_progress = $float_total/4000;
   ?>
-  <meta name="og:title" content="Auburn Ultimate - CALIFORNIA OR BUST" />
-  <meta name="og:description" content="We've been invited to the 2015 Stanford Invite and we need some help getting there!" />
-  <meta name="og:image" content="http://auburnultimate.com/merch4.jpg" />
+  <meta property="og:title" content="Auburn Ultimate - CALIFORNIA OR BUST" />
+  <meta property="og:url" content="http://auburnultimate.com/" />
+  <meta property="og:description" content="We've been invited to the 2015 Stanford Invite and we need some help getting there!" />
+  <meta property="og:image" content="http://auburnultimate.com/merch4.jpg" />
   <style>
 
   <?php
