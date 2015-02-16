@@ -2,19 +2,46 @@
 <html>
 <head>
   <link rel="stylesheet" href="fundraiser.css" />
+  <style>
+    @-webkit-keyframes disc_fly {
+      0%   { -webkit-transform: translate(600%,1100%); }
+      100% { -webkit-transform: translate(20%,630%); }
+    }
+    @keyframes disc_fly {
+      0%   { -webkit-transform: translate(64%,64%); }
+      100% { -webkit-transform: translate(40%,40%); }
+    }
+    /*@-moz-keyframes disc_fly {
+      0%   { -webkit-transform: translate (0px,10px); }
+      100% { -webkit-transform: translate (0px,10px); }
+    }
+    @-o-keyframes disc_fly {
+      0%   { -webkit-transform: translate (0px,10px); }
+      100% { -webkit-transform: translate (0px,10px); }
+    }*/
+  </style>
   <title>Auburn Ultimate - We're going to California!</title>
+  <meta name="viewport" content="initial-scale=1.0; width=device-width;" />
 </head>
 <body>
+
+  <?php
+
+    include('math.php');
+
+  ?>
+
+  <h2></h2>
   <div class="header">
     <p>Dear Auburn and Auburn Ultimate Family,</p>
     <h2>We're going to</h2>
-    <h1>CALIFORNIA</h1>
+    <h1>CALI<span class="fornia">FORNIA</span></h1>
     <p>for the <a href="http://play.usaultimate.org/events/Stanford-Invite-2015/" target="_blank">2015 Stanford Invitational</a></p>
   </div>
 
   <div id="map-widget">
-    <img src="us-map-blank.svg" class="map" />
     <div class="disc"></div>
+    <img src="us-map-blank.svg" class="map" />
   </div>
 
   <div class="letter">
@@ -23,10 +50,10 @@
 
     <h3>We've got merchandise for sale:</h3>
     <ul class="clearfix pics">
-      <li><img src="https://lh5.googleusercontent.com/Fubkf6ldm8DFnr4s2NvGo8iojso2u11Y4WPn4PU2OgaZsC4zNXrphBfnnvDqq3ebztgm3w=w400-h300" /></li>
-      <li><img src="https://lh5.googleusercontent.com/IsKCVvs8irkRcr9K0LdOAxvauawHpw5ymeqNcxIeB4ftpQdQkz_VaTYDTTCczW3j5WkjQg=w400-h300" /></li>
-      <li><img src="https://lh6.googleusercontent.com/dbARhGRaRl83Mupxi3na4DFB1CwMKUzHnuvIVlfL-vbA_XW1yvN2cchcMuoLndf4W5C-bQ=w400-h300" /></li>
-      <li><img src="https://lh6.googleusercontent.com/riKfOGNapa-wIIZ3k169nZMJkI5ZP2Rnz85M2Iq6ENS6gyYuQHLXYoXjnpE_Hh9J4S4Ovw=w400-h300" /></li>
+      <li><img src="merch1.jpg" /></li>
+      <li><img src="merch2.jpg" /></li>
+      <li><img src="merch3.jpg" /></li>
+      <li><img src="merch4.jpg" /></li>
       <li>
     </ul>
     <p><a href="https://drive.google.com/folderview?id=0B0d8lHBCAsDpc1d0a1hRb0xFeHc&amp;usp=sharing" target="_blank">CHECK IT OUT</a></p>
@@ -41,8 +68,8 @@
       <input type="hidden" name="no_note" value="0">
       <input type="hidden" name="currency_code" value="USD">
       <input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest">
-      <input type="text" name="amount" value="" placeholder="25.00" /><br />
-      <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+      <input type="text" name="amount" value="25.00" placeholder="25.00" style="font-size: 1.5em" />
+      <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" style="display: block; margin: 1em auto; border: 0;" name="submit" alt="PayPal - The safer, easier way to pay online!">
       <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
     </form>
 

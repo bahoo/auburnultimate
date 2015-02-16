@@ -312,4 +312,5 @@
      <path d="M 41.000 248.000 C 380.000 165.000, 630.000 385.000, 667.000 407.000 C 630.000 385.000, 380.000 165.000, 41.000 248.000" style="stroke:#FFFFFF;stroke-width: 2;stroke-opacity:0.4;" />
   <path  d="M 43.000 255.000 L 54.756 261.180 L 52.511 248.090 L 62.021 238.820 L 48.878 236.910 L 43.000 225.000 L 37.122 236.910 L 23.979 238.820 L 33.489 248.090 L 31.244 261.180 L 43.000 255.000" style="fill:#ffffff;stroke:#000000;stroke-opacity:1;fill-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none" id="stanford-star" />
   <path  d="M 670.000 415.000 L 681.756 421.180 L 679.511 408.090 L 689.021 398.820 L 675.878 396.910 L 670.000 385.000 L 664.122 396.910 L 650.979 398.820 L 660.489 408.090 L 658.244 421.180 L 670.000 415.000" style="fill:#ffffff;stroke:#000000;stroke-opacity:1;fill-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none" id="auburn-star" />
+  <text x="43" y="285" fill="white" style="font-size: 24px; font-family: Helvetica, Arial, sans-serif">Goal: $8,000</text>
 </svg>

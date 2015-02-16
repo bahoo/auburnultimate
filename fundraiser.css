@@ -33,18 +33,19 @@ h1{
 }
 
 .map{
+  margin-top: -5%;
   max-width: 100%;
 }
 
 .disc{
-  position: absolute;
+  position: relative;
   background: #fff;
   border-radius: 50%;
   width: 10%;
   height: 5%;
   box-shadow: 0 2px 6px #333, 0 -3px 3px #333 inset;
-  left: 62%;
-  top: 64%;
+  min-height: 20px;
+  -webkit-animation: disc_fly 5s infinite;
 }
 
 .letter{
@@ -62,4 +63,24 @@ h1{
 .letter .pics li{
   max-width: 25em;
   display: inline-block;
+}
+
+a:link, a:visited{
+  color: #dd550c;
+  text-decoration: none;
+}
+
+a:hover, a:active{
+  color: #dd550c;
+  text-decoration: underline;
+}
+
+img{
+  max-width: 100%;
+}
+
+@media (screen-width-max: 320px){
+  .fornia{
+    display: none;
+  }
 }
