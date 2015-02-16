@@ -50,10 +50,10 @@
 
       @-webkit-keyframes disc_fly_y {
         0%   { -webkit-transform: translateY(920%); -webkit-animation-timing-function: ease-out; }
-        <?php if($float_total <= 4000): ?>
+        <?php if($float_total <= 4500): ?>
           100% { -webkit-transform: translateY(<?php echo 500 + (1 - $midway_progress) * 500 ; ?>%); -webkit-animation-timing-function: ease-out; }
         <?php else: ?>
-          <?php echo 50 + ($float_total-4000)/4000 * 100; ?>%   { -webkit-transform: translateY(500%); -webkit-animation-timing-function: ease-in; }
+          <?php echo max(0.5, 0.5 - ($float_total-2500)/4000) * 100; ?>%   { -webkit-transform: translateY(500%); -webkit-animation-timing-function: ease-in; }
           100% { -webkit-transform: translateY(<?php echo 500 + $funding_progress*30; ?>%); }
         <?php endif; ?>
       }
@@ -66,7 +66,7 @@
     <p>Dear Auburn and Auburn Ultimate Family,</p>
     <h2>We're going to</h2>
     <h1>CALI<span class="fornia">FORNIA</span></h1>
-    <p>for the <a href="http://play.usaultimate.org/events/Stanford-Invite-2015/" target="_blank">2015 Stanford Invite</a></p>
+    <p style="position: relative; z-index: 5;">for the <a href="http://play.usaultimate.org/events/Stanford-Invite-2015/" target="_blank">2015 Stanford Invite</a></p>
   </div>
 
   <div id="map-widget">
