@@ -62,7 +62,7 @@
     <p>Dear Auburn and Auburn Ultimate Family,</p>
     <h2>We're going to</h2>
     <h1>CALI<span class="fornia">FORNIA</span></h1>
-    <p>for the <a href="http://play.usaultimate.org/events/Stanford-Invite-2015/" target="_blank">2015 Stanford Invitational</a></p>
+    <p>for the <a href="http://play.usaultimate.org/events/Stanford-Invite-2015/" target="_blank">2015 Stanford Invite</a></p>
   </div>
 
   <div id="map-widget">
