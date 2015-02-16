@@ -44,17 +44,17 @@
     */
   ?>
       @-webkit-keyframes disc_fly_x {
-        0%   { -webkit-transform: translateX(62%); -webkit-animation-timing-function: ease-out; }
-        100% { -webkit-transform: translateX(<?php echo 62 - $funding_progress*58; ?>%); -webkit-animation-timing-function: ease-in; }
+        0%   { -webkit-transform: translateX(62%); -webkit-animation-timing-function: ease-out; -webkit-animation-iteration-count: 1; -webkit-animation-delay: 5s;}
+        100% { -webkit-transform: translateX(<?php echo 62 - $funding_progress*58; ?>%); -webkit-animation-timing-function: ease-in; -webkit-animation-iteration-count: 1; -webkit-animation-delay: 5s;}
       }
 
       @-webkit-keyframes disc_fly_y {
-        0%   { -webkit-transform: translateY(920%); -webkit-animation-timing-function: ease-out; }
+        0%   { -webkit-transform: translateY(920%); -webkit-animation-timing-function: ease-out; -webkit-animation-iteration-count: 1; -webkit-animation-delay: 5s;}
         <?php if($float_total <= 4500): ?>
-          100% { -webkit-transform: translateY(<?php echo 500 + (1 - $midway_progress) * 500 ; ?>%); -webkit-animation-timing-function: ease-out; }
+          100% { -webkit-transform: translateY(<?php echo 500 + (1 - $midway_progress) * 500 ; ?>%); -webkit-animation-timing-function: ease-out; -webkit-animation-iteration-count: 1; -webkit-animation-delay: 5s;}
         <?php else: ?>
-          <?php echo max(0.5, 0.5 - ($float_total-2500)/4000) * 100; ?>%   { -webkit-transform: translateY(500%); -webkit-animation-timing-function: ease-in; }
-          100% { -webkit-transform: translateY(<?php echo 500 + $funding_progress*30; ?>%); }
+          <?php echo max(0.5, 0.5 - ($float_total-2500)/4000) * 100; ?>%   { -webkit-transform: translateY(500%); -webkit-animation-timing-function: ease-in; -webkit-animation-iteration-count: 1; -webkit-animation-delay: 5s;}
+          100% { -webkit-transform: translateY(<?php echo 500 + $funding_progress*30; ?>%); -webkit-animation-iteration-count: 1; -webkit-animation-delay: 5s;}
         <?php endif; ?>
       }
   </style>
