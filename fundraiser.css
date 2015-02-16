@@ -37,6 +37,15 @@ h1{
   max-width: 100%;
 }
 
+.disc-wrapper{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-animation: disc_fly_x 4s cubic-bezier(0,1,0.75,1) infinite;
+}
+
 .disc{
   position: relative;
   background: #fff;
@@ -45,7 +54,14 @@ h1{
   height: 5%;
   box-shadow: 0 2px 6px #333, 0 -3px 3px #333 inset;
   min-height: 20px;
-  -webkit-animation: disc_fly 5s infinite;
+  -webkit-animation: disc_fly_y 4s cubic-bezier(0,1,0.75,1) infinite;
+}
+
+.disc .duckets{
+  color: #fff;
+  position: absolute;
+  left: 100%;
+  top: -20%;
 }
 
 .letter{

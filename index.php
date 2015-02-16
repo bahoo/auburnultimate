@@ -2,36 +2,62 @@
 <html>
 <head>
   <link rel="stylesheet" href="fundraiser.css" />
+  <?php
+    include('math.php');
+    if(isset($_GET['force'])){
+      $float_total = min($_GET['force'], 8000);
+    }
+    $funding_progress = $float_total/8000;
+    $midway_progress = $float_total/4000;
+  ?>
   <style>
-    @-webkit-keyframes disc_fly {
-      0%   { -webkit-transform: translate(600%,1100%); }
-      100% { -webkit-transform: translate(20%,630%); }
-    }
-    @keyframes disc_fly {
-      0%   { -webkit-transform: translate(64%,64%); }
-      100% { -webkit-transform: translate(40%,40%); }
-    }
-    /*@-moz-keyframes disc_fly {
-      0%   { -webkit-transform: translate (0px,10px); }
-      100% { -webkit-transform: translate (0px,10px); }
-    }
-    @-o-keyframes disc_fly {
-      0%   { -webkit-transform: translate (0px,10px); }
-      100% { -webkit-transform: translate (0px,10px); }
-    }*/
+
+  <?php
+    /*
+      // static ($8000)
+      @-webkit-keyframes disc_fly_x {
+        0%   { -webkit-transform: translateX(62%); -webkit-animation-timing-function: ease-out; }
+        100% { -webkit-transform: translateX(4%); -webkit-animation-timing-function: ease-in; }
+      }
+
+      @-webkit-keyframes disc_fly_y {
+        0%   { -webkit-transform: translateY(920%); -webkit-animation-timing-function: ease-out; }
+        50%   { -webkit-transform: translateY(500%); -webkit-animation-timing-function: ease-in; }
+        100% { -webkit-transform: translateY(530%); }
+      }
+
+      // static ($4000)
+      @-webkit-keyframes disc_fly_x {
+        0%   { -webkit-transform: translateX(62%); -webkit-animation-timing-function: ease-out; }
+        100% { -webkit-transform: translateX(30%); -webkit-animation-timing-function: ease-in; }
+      }
+
+      @-webkit-keyframes disc_fly_y {
+        0%   { -webkit-transform: translateY(920%); -webkit-animation-timing-function: ease-out; }
+        100%   { -webkit-transform: translateY(500%); -webkit-animation-timing-function: ease-in; }
+      }
+
+    */
+  ?>
+      @-webkit-keyframes disc_fly_x {
+        0%   { -webkit-transform: translateX(62%); -webkit-animation-timing-function: ease-out; }
+        100% { -webkit-transform: translateX(<?php echo 62 - $funding_progress*58; ?>%); -webkit-animation-timing-function: ease-in; }
+      }
+
+      @-webkit-keyframes disc_fly_y {
+        0%   { -webkit-transform: translateY(920%); -webkit-animation-timing-function: ease-out; }
+        <?php if($float_total <= 4000): ?>
+          100% { -webkit-transform: translateY(<?php echo 500 + (1 - $midway_progress) * 500 ; ?>%); -webkit-animation-timing-function: ease-out; }
+        <?php else: ?>
+          <?php echo 50 + ($float_total-4000)/4000 * 100; ?>%   { -webkit-transform: translateY(500%); -webkit-animation-timing-function: ease-in; }
+          100% { -webkit-transform: translateY(<?php echo 500 + $funding_progress*30; ?>%); }
+        <?php endif; ?>
+      }
   </style>
   <title>Auburn Ultimate - We're going to California!</title>
   <meta name="viewport" content="initial-scale=1.0; width=device-width;" />
 </head>
 <body>
-
-  <?php
-
-    include('math.php');
-
-  ?>
-
-  <h2></h2>
   <div class="header">
     <p>Dear Auburn and Auburn Ultimate Family,</p>
     <h2>We're going to</h2>
@@ -40,7 +66,7 @@
   </div>
 
   <div id="map-widget">
-    <div class="disc"></div>
+    <div class="disc-wrapper"><div class="disc"><span class="duckets">$<?php echo number_format($float_total, 2); ?></span></div></div>
     <img src="us-map-blank.svg" class="map" />
   </div>
 
