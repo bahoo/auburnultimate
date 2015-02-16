@@ -9,7 +9,7 @@
       fclose($handle);
 
       if(($handle = fopen('total.php', 'w')) !== FALSE){
-         fwrite($spreadsheet_data[32][1], $handle);
+         fwrite($handle, $spreadsheet_data[32][1]);
          fclose($handle);
       }
 
