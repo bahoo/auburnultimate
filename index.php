@@ -51,10 +51,10 @@
       @-webkit-keyframes disc_fly_y {
         0%   { -webkit-transform: translateY(1220%); -webkit-animation-timing-function: ease-out; }
         <?php if($float_total <= 4500): ?>
-          100% { -webkit-transform: translateY(<?php echo 700 + (1 - $midway_progress) * 500 ; ?>%); -webkit-animation-timing-function: ease-out; }
+          100% { -webkit-transform: translateY(<?php echo 700 + (1 - $midway_progress) * 400 ; ?>%); -webkit-animation-timing-function: ease-out; }
         <?php else: ?>
-          <?php echo max(0.5, 0.5 - ($float_total-2500)/4000) * 100; ?>%   { -webkit-transform: translateY(600%); -webkit-animation-timing-function: ease-in; }
-          100% { -webkit-transform: translateY(<?php echo 550 + $funding_progress*60; ?>%); }
+          <?php echo max(0.5, 0.5 - ($float_total-2500)/4000) * 100; ?>%   { -webkit-transform: translateY(625%); -webkit-animation-timing-function: ease-in; }
+          100% { -webkit-transform: translateY(<?php echo 550 + $funding_progress*65; ?>%); }
         <?php endif; ?>
       }
   </style>
@@ -86,8 +86,8 @@
       <li><img src="merch4.jpg" /></li>
       <li>
     </ul>
-    <p><a href="https://drive.google.com/folderview?id=0B0d8lHBCAsDpc1d0a1hRb0xFeHc&amp;usp=sharing" target="_blank">CHECK IT OUT</a></p>
-    <p>and <a href="https://docs.google.com/spreadsheets/d/11PowoGolt96N0n5gDnvgvTaZUIAt8jhsm19kSxVm730/edit#gid=0" target="_blank">PLACE A BID</a> when you're ready!</p>
+    <p><a href="https://drive.google.com/folderview?id=0B0d8lHBCAsDpc1d0a1hRb0xFeHc&amp;usp=sharing" target="_blank">CHECK OUT THE OFFERINGS</a></p>
+    <p><a href="https://docs.google.com/spreadsheets/d/11PowoGolt96N0n5gDnvgvTaZUIAt8jhsm19kSxVm730/edit#gid=0" target="_blank">scope the bids</a> and email <a href="mailto:multima@auburn.edu">multima@auburn.edu</a> when you're ready to place a bid! (Be generous.)</p>
 
     <h3>or you can donate to us with PayPal:</h3>
     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
