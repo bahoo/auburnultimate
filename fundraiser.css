@@ -50,10 +50,9 @@ h1{
   position: relative;
   background: #fff;
   border-radius: 50%;
-  width: 10%;
+  width: 7%;
   height: 5%;
   box-shadow: 0 2px 6px #333, 0 -3px 3px #333 inset;
-  min-height: 20px;
   -webkit-animation: disc_fly_y 4s cubic-bezier(0,1,0.75,1) infinite;
 }
 

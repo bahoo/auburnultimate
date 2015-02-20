@@ -44,17 +44,17 @@
     */
   ?>
       @-webkit-keyframes disc_fly_x {
-        0%   { -webkit-transform: translateX(62%); -webkit-animation-timing-function: ease-out; }
-        100% { -webkit-transform: translateX(<?php echo 62 - $funding_progress*58; ?>%); -webkit-animation-timing-function: ease-in; }
+        0%   { -webkit-transform: translateX(66%); -webkit-animation-timing-function: ease-out; }
+        100% { -webkit-transform: translateX(<?php echo 66 - $funding_progress*64.5; ?>%); -webkit-animation-timing-function: ease-in; }
       }
 
       @-webkit-keyframes disc_fly_y {
-        0%   { -webkit-transform: translateY(920%); -webkit-animation-timing-function: ease-out; }
+        0%   { -webkit-transform: translateY(1220%); -webkit-animation-timing-function: ease-out; }
         <?php if($float_total <= 4500): ?>
-          100% { -webkit-transform: translateY(<?php echo 500 + (1 - $midway_progress) * 500 ; ?>%); -webkit-animation-timing-function: ease-out; }
+          100% { -webkit-transform: translateY(<?php echo 700 + (1 - $midway_progress) * 500 ; ?>%); -webkit-animation-timing-function: ease-out; }
         <?php else: ?>
-          <?php echo max(0.5, 0.5 - ($float_total-2500)/4000) * 100; ?>%   { -webkit-transform: translateY(500%); -webkit-animation-timing-function: ease-in; }
-          100% { -webkit-transform: translateY(<?php echo 500 + $funding_progress*30; ?>%); }
+          <?php echo max(0.5, 0.5 - ($float_total-2500)/4000) * 100; ?>%   { -webkit-transform: translateY(600%); -webkit-animation-timing-function: ease-in; }
+          100% { -webkit-transform: translateY(<?php echo 550 + $funding_progress*60; ?>%); }
         <?php endif; ?>
       }
   </style>
